@@ -1,0 +1,712 @@
+{
+ "brand": {
+  "name": "FRUBON",
+  "tagline": "Happiness Served Fresh",
+  "promise": "The bond of flavours",
+  "parent": "Dev Milk Foods Pvt. Ltd.",
+  "city": "Jaipur, Rajasthan",
+  "logo": "assets/img/ui/logo.png",
+  "social": {
+   "facebook": "https://www.facebook.com/FRUBONINDIA/",
+   "instagram": "https://www.instagram.com/frubonindia/",
+   "twitter": "https://twitter.com/frubonindia",
+   "linkedin": "https://www.linkedin.com/company/13260439/"
+  },
+  "phone": "+91 73403 22333",
+  "phoneHref": "+917340322333",
+  "email": "customer.feedback@devmilkfoods.com",
+  "parentSite": "https://www.devmilkfoods.com",
+  "address": "Mahindra World City, Jaipur, Rajasthan, India"
+ },
+ "groups": [
+  {
+   "id": "ice-cream",
+   "name": "Ice Cream",
+   "accent": "orange",
+   "tagline": "Churned from fresh cream, never vegetable oil.",
+   "blurb": "Real milk fat, real fruit, real celebration. Every tub, cone and slice in this range is ice cream in the truest sense of the word — the kind you share."
+  },
+  {
+   "id": "sticks-kulfi",
+   "name": "Sticks & Kulfi",
+   "accent": "sky",
+   "tagline": "The bond of flavours, on a stick.",
+   "blurb": "From Rajasthan’s beloved matka kulfi to fruit ice that tastes like the orchard — handheld joy, made for the Indian summer."
+  },
+  {
+   "id": "bakery",
+   "name": "Bakery",
+   "accent": "sun",
+   "tagline": "Baked with the same obsession we churn with.",
+   "blurb": "Cookies from the Bon side of our name — good, simple, honest baking out of the same 60,000 sq ft campus."
+  },
+  {
+   "id": "dairy",
+   "name": "Dairy",
+   "accent": "green",
+   "tagline": "Fresh from our village farmer societies.",
+   "blurb": "Where it all began. Milk collected twice a day, chilled within the hour, and set into the staples a Rajasthani kitchen runs on."
+  }
+ ],
+ "categories": [
+  {
+   "id": "cups",
+   "name": "CUPS",
+   "label": "The Everyday Classic",
+   "group": "ice-cream",
+   "desc": "Ten flavours in a single-serve cup — the format that made Frubon a household name across Rajasthan. Scooped, sealed and frozen the same day it’s churned.",
+   "products": [
+    {
+     "name": "Choco Chips",
+     "image": "assets/img/doc/628814_1895280901.jpg",
+     "zoom": "assets/img/doc/138456_245623229.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Cookie N Cream",
+     "image": "assets/img/doc/708322_1323041374.jpg",
+     "zoom": "assets/img/doc/732771_927626566.jpg",
+     "cutout": false
+    },
+    {
+     "name": "American Nuts",
+     "image": "assets/img/doc/153470_472231043.jpg",
+     "zoom": "assets/img/doc/187646_1953761507.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Tutti Frutti",
+     "image": "assets/img/doc/926591_2122175851.jpg",
+     "zoom": "assets/img/doc/697547_222152496.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Butter Scotch",
+     "image": "assets/img/doc/171248_565423695.jpg",
+     "zoom": "assets/img/doc/364502_1925711740.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Kesar Pista",
+     "image": "assets/img/doc/680070_1907844768.jpg",
+     "zoom": "assets/img/doc/576165_1027231526.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Kaju Draksha",
+     "image": "assets/img/doc/430188_505172297.jpg",
+     "zoom": "assets/img/doc/831790_1054691387.png",
+     "cutout": false
+    },
+    {
+     "name": "Strawberry",
+     "image": "assets/img/doc/941305_1108.png",
+     "zoom": "assets/img/doc/316705_43364949.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Mango",
+     "image": "assets/img/doc/563980_24306.png",
+     "zoom": "assets/img/doc/305349_486580046.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Vanilla",
+     "image": "assets/img/doc/728720_23752.png",
+     "zoom": "assets/img/doc/347749_1977391884.jpg",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "frujoy",
+   "name": "FRUJOY",
+   "label": "Family Pack",
+   "group": "ice-cream",
+   "desc": "The tub you bring home. Ten flavours built for a table full of people, from Alphonso Mango to Kaju Kishmish.",
+   "products": [
+    {
+     "name": "Alphonso Mango",
+     "image": "assets/img/doc/377498_166983947.png",
+     "zoom": "assets/img/doc/841201_668574063.jpg",
+     "cutout": false
+    },
+    {
+     "name": "American Nuts",
+     "image": "assets/img/doc/807463_1718191870.png",
+     "zoom": "assets/img/doc/295710_2101678895.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Butter Scotch",
+     "image": "assets/img/doc/428400_1983429977.png",
+     "zoom": "assets/img/doc/231168_119235648.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Chocolate",
+     "image": "assets/img/doc/456718_1900211238.png",
+     "zoom": "assets/img/doc/749239_1518415875.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Kaju Kishmish",
+     "image": "assets/img/doc/730259_1731931978.png",
+     "zoom": "assets/img/doc/943159_1214701862.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Kesar Badam",
+     "image": "assets/img/doc/607460_920769875.png",
+     "zoom": "assets/img/doc/527536_2109909807.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Kesar Pista",
+     "image": "assets/img/doc/884495_1942439866.png",
+     "zoom": "assets/img/doc/541750_492829497.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Vanilla Choco Chips",
+     "image": "assets/img/doc/891848_170151036.png",
+     "zoom": "assets/img/doc/121113_1642020701.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Vanilla",
+     "image": "assets/img/doc/431473_1211714196.png",
+     "zoom": "assets/img/doc/778520_226570376.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Strawberry",
+     "image": "assets/img/doc/683097_220414286.png",
+     "zoom": "assets/img/doc/786994_561416119.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "frublast",
+   "name": "FRUBLAST",
+   "label": "Party Pack",
+   "group": "ice-cream",
+   "desc": "Seven flavours in a format made for a crowd — birthdays, festivals, and the evenings that turn into celebrations without warning.",
+   "products": [
+    {
+     "name": "Butter Scotch",
+     "image": "assets/img/doc/980184_1397090594.png",
+     "zoom": "assets/img/doc/738198_1324420046.png",
+     "cutout": false
+    },
+    {
+     "name": "Choco Chips",
+     "image": "assets/img/doc/507847_2012276981.png",
+     "zoom": "assets/img/doc/468710_1263488378.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Choco Fudge",
+     "image": "assets/img/doc/420336_931608110.png",
+     "zoom": "assets/img/doc/421162_1924324030.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Fruit n Nut",
+     "image": "assets/img/doc/226637_526822133.png",
+     "zoom": "assets/img/doc/365388_1776231626.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Nepolitan",
+     "image": "assets/img/doc/434533_356987575.png",
+     "zoom": "assets/img/doc/470753_866849116.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Shahi Rajbhog",
+     "image": "assets/img/doc/655164_2062587798.png",
+     "zoom": "assets/img/doc/256879_1832741354.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Vanilla",
+     "image": "assets/img/doc/749092_531177538.png",
+     "zoom": "assets/img/doc/928725_855836640.jpg",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "frucone",
+   "name": "FRUCONE",
+   "label": "Cones",
+   "group": "ice-cream",
+   "desc": "A wafer cone filled edge to edge, finished with a chocolate seal at the tip. Five avatars, each one engineered for the last bite.",
+   "products": [
+    {
+     "name": "Pista Passion",
+     "image": "assets/img/doc/591050_1956782918.png",
+     "zoom": "assets/img/doc/791074_1666843502.png",
+     "cutout": true
+    },
+    {
+     "name": "Choco Treat",
+     "image": "assets/img/doc/136172_731212438.png",
+     "zoom": "assets/img/doc/656594_578526461.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Butter Scotch",
+     "image": "assets/img/doc/739399_260533403.png",
+     "zoom": "assets/img/doc/932285_532315765.png",
+     "cutout": false
+    },
+    {
+     "name": "Choco Vanilla",
+     "image": "assets/img/doc/158118_2021620548.png",
+     "zoom": "assets/img/doc/141520_1859904532.png",
+     "cutout": false
+    },
+    {
+     "name": "Vanilla Kesar Ripple",
+     "image": "assets/img/doc/565022_162116619.png",
+     "zoom": "assets/img/doc/524989_2079551257.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "frudae",
+   "name": "FRUDAE",
+   "label": "Sundae",
+   "group": "ice-cream",
+   "desc": "Layered sundaes with sauce and crunch folded through — dessert-parlour indulgence, sealed in a cup.",
+   "products": [
+    {
+     "name": "Choco Almond Frudae",
+     "image": "assets/img/doc/780713_1643173014.png",
+     "zoom": "assets/img/doc/237738_1853843228.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Bash Frudae",
+     "image": "assets/img/doc/374918_231256435.png",
+     "zoom": "assets/img/doc/595182_1120750069.jpg",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "frupple",
+   "name": "FRUPPLE",
+   "label": "Ripple Cup",
+   "group": "ice-cream",
+   "desc": "Fruit ripple threaded through soft vanilla. Two flavours that read sweet and finish tart.",
+   "products": [
+    {
+     "name": "Strawberry Frupple",
+     "image": "assets/img/doc/265043_833057985.png",
+     "zoom": "assets/img/doc/466743_737429868.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Chocolate Frupple",
+     "image": "assets/img/doc/933267_998558072.png",
+     "zoom": "assets/img/doc/130963_501493064.jpg",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "sweet-surprise",
+   "name": "SWEET SURPRISE",
+   "label": "Bulk & Light",
+   "group": "ice-cream",
+   "desc": "Low fat and medium fat variants in bulk formats — for parlours, kitchens and anyone who scoops at scale.",
+   "products": [
+    {
+     "name": "Low Fat Ice Cream",
+     "image": "assets/img/doc/224416_944232859.png",
+     "zoom": "assets/img/doc/943979_1497309201.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Medium Fat Ice Cream",
+     "image": "assets/img/doc/310037_1695791817.png",
+     "zoom": "assets/img/doc/136705_1030489890.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Ice Cream",
+     "image": "assets/img/doc/728839_12680671.png",
+     "zoom": "assets/img/doc/462266_744896263.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Ice Cream",
+     "image": "assets/img/doc/956627_1544804752.png",
+     "zoom": "assets/img/doc/719516_513603813.png",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "cassata-slice",
+   "name": "CASSATA SLICE",
+   "label": "Cassata",
+   "group": "ice-cream",
+   "desc": "The classic layered slice — three flavours, tutti frutti and nuts, cut clean.",
+   "products": [
+    {
+     "name": "Cassatta Slice",
+     "image": "assets/img/doc/676268_774512186.jpg",
+     "zoom": "assets/img/doc/236519_980639472.jpg",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "ice-cream-cakes",
+   "name": "ICE CREAM CAKES",
+   "label": "Celebration Cakes",
+   "group": "ice-cream",
+   "desc": "Black Fantasy and Golden Fantasy — ice cream cakes for the moments that deserve a candle.",
+   "products": [
+    {
+     "name": "Black Fantasy",
+     "image": "assets/img/doc/247750_1523657346.png",
+     "zoom": "assets/img/doc/547584_625612827.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Golden Fantasy",
+     "image": "assets/img/doc/955254_196652901.png",
+     "zoom": "assets/img/doc/764575_423415750.png",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "frulicks",
+   "name": "FRULICKS",
+   "label": "Fruit Ice",
+   "group": "sticks-kulfi",
+   "desc": "Mango, Orange and Cola on a stick. Bright, clean fruit ice — the first thing you reach for at forty-five degrees.",
+   "products": [
+    {
+     "name": "Mango",
+     "image": "assets/img/doc/771035_1103070580.png",
+     "zoom": "assets/img/doc/263561_867662023.png",
+     "cutout": true
+    },
+    {
+     "name": "Orange",
+     "image": "assets/img/doc/432108_1018062900.png",
+     "zoom": "assets/img/doc/211164_574206731.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Cola",
+     "image": "assets/img/doc/575841_1250409881.png",
+     "zoom": "assets/img/doc/670109_1860301210.png",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "frufies",
+   "name": "FRUFIES",
+   "label": "Kulfi Sticks",
+   "group": "sticks-kulfi",
+   "desc": "Pista, Kesar Badam and Kewra — slow-set kulfi in a modern stick format, with the density the tradition demands.",
+   "products": [
+    {
+     "name": "Pista Kulfi",
+     "image": "assets/img/doc/569897_266543854.png",
+     "zoom": "assets/img/doc/850172_1828503820.png",
+     "cutout": true
+    },
+    {
+     "name": "Kesar Badam Kulfi",
+     "image": "assets/img/doc/174843_406147747.png",
+     "zoom": "assets/img/doc/684838_1706102146.png",
+     "cutout": true
+    },
+    {
+     "name": "Kewra Kulfi",
+     "image": "assets/img/doc/661123_1009741827.png",
+     "zoom": "assets/img/doc/181729_1739284606.jpg",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "frudolly",
+   "name": "FRUDOLLY",
+   "label": "Dolly",
+   "group": "sticks-kulfi",
+   "desc": "Mango and Strawberry dollies — the small format that belongs to childhood.",
+   "products": [
+    {
+     "name": "Mango",
+     "image": "assets/img/doc/801732_74921376.png",
+     "zoom": "assets/img/doc/266009_714199111.png",
+     "cutout": true
+    },
+    {
+     "name": "Strawberry",
+     "image": "assets/img/doc/628253_538240308.png",
+     "zoom": "assets/img/doc/766391_1966733556.jpg",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "frupop",
+   "name": "FRUPOP",
+   "label": "Pop",
+   "group": "sticks-kulfi",
+   "desc": "Butter Scotch and Ice Spice. Two pops with an unapologetic amount of character.",
+   "products": [
+    {
+     "name": "Butter Scotch",
+     "image": "assets/img/doc/386616_303351140.png",
+     "zoom": "assets/img/doc/948792_1970247619.jpg",
+     "cutout": false
+    },
+    {
+     "name": "Ice Spice",
+     "image": "assets/img/doc/291819_1776495006.png",
+     "zoom": "assets/img/doc/204646_1996344545.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "choco-bon",
+   "name": "CHOCO BON",
+   "label": "Choco Bars",
+   "group": "sticks-kulfi",
+   "desc": "Mini Champ, Bash, Almond Truffle and Fruit n Nut — ice cream jacketed in real chocolate that cracks when you bite.",
+   "products": [
+    {
+     "name": "Mini Champ",
+     "image": "assets/img/doc/340690_1814699625.png",
+     "zoom": "assets/img/doc/209588_1782800856.png",
+     "cutout": true
+    },
+    {
+     "name": "Bash",
+     "image": "assets/img/doc/519654_1258810145.png",
+     "zoom": "assets/img/doc/882547_11993444.jpg",
+     "cutout": true
+    },
+    {
+     "name": "Almond Truffle",
+     "image": "assets/img/doc/994777_89261750.png",
+     "zoom": "assets/img/doc/280266_1000632885.png",
+     "cutout": true
+    },
+    {
+     "name": "Fruit n Nut",
+     "image": "assets/img/doc/885925_878608810.png",
+     "zoom": "assets/img/doc/815062_1871608392.png",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "chunky",
+   "name": "CHUNKY",
+   "label": "Chunky Bar",
+   "group": "sticks-kulfi",
+   "desc": "One bar, loaded. Thick couverture, thicker centre.",
+   "products": [
+    {
+     "name": "Chunky",
+     "image": "assets/img/doc/652102_1216652674.png",
+     "zoom": "assets/img/doc/247710_325217129.jpg",
+     "cutout": true
+    }
+   ]
+  },
+  {
+   "id": "matka-kulfi",
+   "name": "MATKA KULFI",
+   "label": "Matka Kulfi",
+   "group": "sticks-kulfi",
+   "desc": "Set and served in an earthen matka, the way Rajasthan has always done it. Nothing about this one has been modernised — on purpose.",
+   "products": [
+    {
+     "name": "Matka Kulfi",
+     "image": "assets/img/doc/950526_769271461.jpg",
+     "zoom": "assets/img/doc/253115_1951906263.jpg",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "bon-cookies",
+   "name": "BON COOKIES",
+   "label": "Cookies",
+   "group": "bakery",
+   "desc": "Tutti Frutti, Choco Chips, Atta and Zeera — four cookies from the Bon half of our name.",
+   "products": [
+    {
+     "name": "Tutti frutti Cookies",
+     "image": "assets/img/doc/665329_630058219.png",
+     "zoom": "assets/img/doc/427858_123641794.png",
+     "cutout": false
+    },
+    {
+     "name": "Choco Chips Cookies",
+     "image": "assets/img/doc/710220_1952827524.png",
+     "zoom": "assets/img/doc/120215_1789546508.png",
+     "cutout": false
+    },
+    {
+     "name": "Atta Cookies",
+     "image": "assets/img/doc/880063_484205207.png",
+     "zoom": "assets/img/doc/947350_722418975.png",
+     "cutout": false
+    },
+    {
+     "name": "Zeera Cookies",
+     "image": "assets/img/doc/268244_451388574.png",
+     "zoom": "assets/img/doc/750665_35361684.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "milk",
+   "name": "MILK",
+   "label": "Milk",
+   "group": "dairy",
+   "desc": "Full Cream, Toned and Double Toned — collected twice daily from our own village farmer societies and chilled at source.",
+   "products": [
+    {
+     "name": "Full Cream Milk",
+     "image": "assets/img/doc/956280_770256044.png",
+     "zoom": "assets/img/doc/415989_2031884161.png",
+     "cutout": false
+    },
+    {
+     "name": "Double Toned Milk",
+     "image": "assets/img/doc/147544_1671419557.png",
+     "zoom": "assets/img/doc/419922_1485803588.png",
+     "cutout": false
+    },
+    {
+     "name": "Toned Milk",
+     "image": "assets/img/doc/283015_1179947541.png",
+     "zoom": "assets/img/doc/720890_1909868481.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "dahi",
+   "name": "DAHI",
+   "label": "Dahi",
+   "group": "dairy",
+   "desc": "Set thick and sweet-fresh, from the same morning’s milk.",
+   "products": [
+    {
+     "name": "Dahi",
+     "image": "assets/img/doc/546709_1746983445.jpg",
+     "zoom": "assets/img/doc/648766_1047416299.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "chhach",
+   "name": "CHHACH",
+   "label": "Chhach",
+   "group": "dairy",
+   "desc": "Spiced buttermilk — Rajasthan’s answer to the afternoon.",
+   "products": [
+    {
+     "name": "Chhach",
+     "image": "assets/img/doc/382590_1176895311.png",
+     "zoom": "assets/img/doc/519059_1944296772.png",
+     "cutout": false
+    },
+    {
+     "name": "Chhach",
+     "image": "assets/img/doc/770294_1580193488.jpg",
+     "zoom": "assets/img/doc/663657_1715323039.png",
+     "cutout": false
+    }
+   ]
+  },
+  {
+   "id": "paneer",
+   "name": "PANEER",
+   "label": "Paneer",
+   "group": "dairy",
+   "desc": "Soft, fresh-pressed paneer that holds its shape in the kadhai.",
+   "products": [
+    {
+     "name": "Paneer",
+     "image": "assets/img/doc/116909_203976023.jpg",
+     "zoom": "assets/img/doc/351294_1790733894.png",
+     "cutout": false
+    }
+   ]
+  }
+ ],
+ "gallery": {
+  "home_slides": [
+   "assets/img/doc/929334_1024782983.jpg",
+   "assets/img/doc/760110_1187457718.png",
+   "assets/img/doc/788568_26255.jpg",
+   "assets/img/doc/867175_11557.jpg",
+   "assets/img/doc/495854_770270126.png",
+   "assets/img/doc/391000_31072.jpg",
+   "assets/img/doc/311624_7902.jpg",
+   "assets/img/doc/948995_19340.jpg",
+   "assets/img/doc/769587_1809299850.jpg",
+   "assets/img/doc/605900_1787103809.png",
+   "assets/img/doc/872357_160627221.png"
+  ],
+  "infrastructure": [
+   "assets/img/doc/slide-1.jpg",
+   "assets/img/doc/slide-2.jpg",
+   "assets/img/doc/slide-3.jpg",
+   "assets/img/doc/slide-4.jpg"
+  ],
+  "csr": [
+   "assets/img/doc/g1.jpg",
+   "assets/img/doc/g2.jpg",
+   "assets/img/doc/g3.jpg",
+   "assets/img/doc/g4.jpg"
+  ],
+  "promotions": [
+   "assets/img/doc/968167_1613443318.jpg",
+   "assets/img/doc/643189_966265578.jpg",
+   "assets/img/doc/658002_1858878420.jpg"
+  ],
+  "events_index": [
+   "assets/img/doc/848383_1155488650.jpg",
+   "assets/img/doc/549565_1822159868.jpg"
+  ],
+  "event_5": [
+   "assets/img/doc/912467_505784421.jpg",
+   "assets/img/doc/320235_1804418127.jpg",
+   "assets/img/doc/177736_13332.jpg"
+  ],
+  "event_6": [
+   "assets/img/doc/627923_1406209556.jpg",
+   "assets/img/doc/740388_1462992525.jpg"
+  ],
+  "factory_tour": [
+   "assets/img/doc/987318_322450012.jpg",
+   "assets/img/doc/790568_702880577.jpg",
+   "assets/img/doc/526422_1663334321.jpg"
+  ]
+ }
+}

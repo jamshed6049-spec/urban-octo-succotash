@@ -1,0 +1,528 @@
+{
+ "categories": [
+  {
+   "cid": 1,
+   "name": "CUPS",
+   "products": [
+    {
+     "image": "doc/628814_1895280901.jpg",
+     "name": "Choco Chips",
+     "zoom": "doc/138456_245623229.jpg"
+    },
+    {
+     "image": "doc/708322_1323041374.jpg",
+     "name": "Cookie N Cream",
+     "zoom": "doc/732771_927626566.jpg"
+    },
+    {
+     "image": "doc/153470_472231043.jpg",
+     "name": "American Nuts",
+     "zoom": "doc/187646_1953761507.jpg"
+    },
+    {
+     "image": "doc/926591_2122175851.jpg",
+     "name": "Tutti Frutti",
+     "zoom": "doc/697547_222152496.jpg"
+    },
+    {
+     "image": "doc/171248_565423695.jpg",
+     "name": "Butter Scotch",
+     "zoom": "doc/364502_1925711740.jpg"
+    },
+    {
+     "image": "doc/680070_1907844768.jpg",
+     "name": "Kesar Pista",
+     "zoom": "doc/576165_1027231526.jpg"
+    },
+    {
+     "image": "doc/430188_505172297.jpg",
+     "name": "Kaju Draksha",
+     "zoom": "doc/831790_1054691387.png"
+    },
+    {
+     "image": "doc/941305_1108.png",
+     "name": "STRAWBERRY",
+     "zoom": "doc/316705_43364949.jpg"
+    },
+    {
+     "image": "doc/563980_24306.png",
+     "name": "MANGO",
+     "zoom": "doc/305349_486580046.jpg"
+    },
+    {
+     "image": "doc/728720_23752.png",
+     "name": "VANILLA",
+     "zoom": "doc/347749_1977391884.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 2,
+   "name": "FRULICKS",
+   "products": [
+    {
+     "image": "doc/771035_1103070580.png",
+     "name": "Mango",
+     "zoom": "doc/263561_867662023.png"
+    },
+    {
+     "image": "doc/432108_1018062900.png",
+     "name": "Orange",
+     "zoom": "doc/211164_574206731.jpg"
+    },
+    {
+     "image": "doc/575841_1250409881.png",
+     "name": "Cola",
+     "zoom": "doc/670109_1860301210.png"
+    }
+   ]
+  },
+  {
+   "cid": 3,
+   "name": "FRUFIES",
+   "products": [
+    {
+     "image": "doc/569897_266543854.png",
+     "name": "Pista Kulfi",
+     "zoom": "doc/850172_1828503820.png"
+    },
+    {
+     "image": "doc/174843_406147747.png",
+     "name": "Kesar Badam Kulfi",
+     "zoom": "doc/684838_1706102146.png"
+    },
+    {
+     "image": "doc/661123_1009741827.png",
+     "name": "Kewra Kulfi",
+     "zoom": "doc/181729_1739284606.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 4,
+   "name": "FRUDOLLY",
+   "products": [
+    {
+     "image": "doc/801732_74921376.png",
+     "name": "Mango",
+     "zoom": "doc/266009_714199111.png"
+    },
+    {
+     "image": "doc/628253_538240308.png",
+     "name": "Strawberry",
+     "zoom": "doc/766391_1966733556.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 7,
+   "name": "FRUPOP",
+   "products": [
+    {
+     "image": "doc/386616_303351140.png",
+     "name": "Butter Scotch",
+     "zoom": "doc/948792_1970247619.jpg"
+    },
+    {
+     "image": "doc/291819_1776495006.png",
+     "name": "Ice Spice",
+     "zoom": "doc/204646_1996344545.png"
+    }
+   ]
+  },
+  {
+   "cid": 5,
+   "name": "CHOCO BON",
+   "products": [
+    {
+     "image": "doc/340690_1814699625.png",
+     "name": "Mini Champ",
+     "zoom": "doc/209588_1782800856.png"
+    },
+    {
+     "image": "doc/519654_1258810145.png",
+     "name": "Bash",
+     "zoom": "doc/882547_11993444.jpg"
+    },
+    {
+     "image": "doc/994777_89261750.png",
+     "name": "Almond Truffle",
+     "zoom": "doc/280266_1000632885.png"
+    },
+    {
+     "image": "doc/885925_878608810.png",
+     "name": "Fruit n Nut",
+     "zoom": "doc/815062_1871608392.png"
+    }
+   ]
+  },
+  {
+   "cid": 6,
+   "name": "CHUNKY",
+   "products": [
+    {
+     "image": "doc/652102_1216652674.png",
+     "name": "Chunky",
+     "zoom": "doc/247710_325217129.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 8,
+   "name": "FRUCONE",
+   "products": [
+    {
+     "image": "doc/591050_1956782918.png",
+     "name": "Pista Passion",
+     "zoom": "doc/791074_1666843502.png"
+    },
+    {
+     "image": "doc/136172_731212438.png",
+     "name": "Choco Treat",
+     "zoom": "doc/656594_578526461.jpg"
+    },
+    {
+     "image": "doc/739399_260533403.png",
+     "name": "Butter Scotch",
+     "zoom": "doc/932285_532315765.png"
+    },
+    {
+     "image": "doc/158118_2021620548.png",
+     "name": "Choco Vanilla",
+     "zoom": "doc/141520_1859904532.png"
+    },
+    {
+     "image": "doc/565022_162116619.png",
+     "name": "Vanilla Kesar Ripple",
+     "zoom": "doc/524989_2079551257.png"
+    }
+   ]
+  },
+  {
+   "cid": 9,
+   "name": "FRUDAE",
+   "products": [
+    {
+     "image": "doc/780713_1643173014.png",
+     "name": "Choco Almond Frudae",
+     "zoom": "doc/237738_1853843228.jpg"
+    },
+    {
+     "image": "doc/374918_231256435.png",
+     "name": "Bash Frudae",
+     "zoom": "doc/595182_1120750069.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 10,
+   "name": "FRUPPLE",
+   "products": [
+    {
+     "image": "doc/265043_833057985.png",
+     "name": "Strawberry Frupple",
+     "zoom": "doc/466743_737429868.jpg"
+    },
+    {
+     "image": "doc/933267_998558072.png",
+     "name": "Chocolate Frupple",
+     "zoom": "doc/130963_501493064.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 11,
+   "name": "FRUJOY",
+   "products": [
+    {
+     "image": "doc/377498_166983947.png",
+     "name": "Alphonso Mango",
+     "zoom": "doc/841201_668574063.jpg"
+    },
+    {
+     "image": "doc/807463_1718191870.png",
+     "name": "American Nuts",
+     "zoom": "doc/295710_2101678895.jpg"
+    },
+    {
+     "image": "doc/428400_1983429977.png",
+     "name": "Butter Scotch",
+     "zoom": "doc/231168_119235648.jpg"
+    },
+    {
+     "image": "doc/456718_1900211238.png",
+     "name": "Chocolate",
+     "zoom": "doc/749239_1518415875.jpg"
+    },
+    {
+     "image": "doc/730259_1731931978.png",
+     "name": "Kaju Kishmish",
+     "zoom": "doc/943159_1214701862.jpg"
+    },
+    {
+     "image": "doc/607460_920769875.png",
+     "name": "Kesar Badam",
+     "zoom": "doc/527536_2109909807.jpg"
+    },
+    {
+     "image": "doc/884495_1942439866.png",
+     "name": "Kesar Pista",
+     "zoom": "doc/541750_492829497.jpg"
+    },
+    {
+     "image": "doc/891848_170151036.png",
+     "name": "Vanilla Choco Chips",
+     "zoom": "doc/121113_1642020701.jpg"
+    },
+    {
+     "image": "doc/431473_1211714196.png",
+     "name": "Vanilla",
+     "zoom": "doc/778520_226570376.jpg"
+    },
+    {
+     "image": "doc/683097_220414286.png",
+     "name": "Strawberry",
+     "zoom": "doc/786994_561416119.png"
+    }
+   ]
+  },
+  {
+   "cid": 12,
+   "name": "FRUBLAST",
+   "products": [
+    {
+     "image": "doc/980184_1397090594.png",
+     "name": "Butter Scotch",
+     "zoom": "doc/738198_1324420046.png"
+    },
+    {
+     "image": "doc/507847_2012276981.png",
+     "name": "Choco Chips",
+     "zoom": "doc/468710_1263488378.jpg"
+    },
+    {
+     "image": "doc/420336_931608110.png",
+     "name": "Choco Fudge",
+     "zoom": "doc/421162_1924324030.jpg"
+    },
+    {
+     "image": "doc/226637_526822133.png",
+     "name": "Fruit n Nut",
+     "zoom": "doc/365388_1776231626.jpg"
+    },
+    {
+     "image": "doc/434533_356987575.png",
+     "name": "Nepolitan",
+     "zoom": "doc/470753_866849116.jpg"
+    },
+    {
+     "image": "doc/655164_2062587798.png",
+     "name": "Shahi Rajbhog",
+     "zoom": "doc/256879_1832741354.jpg"
+    },
+    {
+     "image": "doc/749092_531177538.png",
+     "name": "Vanilla",
+     "zoom": "doc/928725_855836640.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 13,
+   "name": "CASSATA SLICE",
+   "products": [
+    {
+     "image": "doc/676268_774512186.jpg",
+     "name": "Cassatta Slice",
+     "zoom": "doc/236519_980639472.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 14,
+   "name": "MATKA KULFI",
+   "products": [
+    {
+     "image": "doc/950526_769271461.jpg",
+     "name": "Matka Kulfi",
+     "zoom": "doc/253115_1951906263.jpg"
+    }
+   ]
+  },
+  {
+   "cid": 15,
+   "name": "ICE CREAM CAKES",
+   "products": [
+    {
+     "image": "doc/247750_1523657346.png",
+     "name": "Black Fantasy",
+     "zoom": "doc/547584_625612827.jpg"
+    },
+    {
+     "image": "doc/955254_196652901.png",
+     "name": "Golden Fantasy",
+     "zoom": "doc/764575_423415750.png"
+    }
+   ]
+  },
+  {
+   "cid": 16,
+   "name": "SWEET SURPRISE",
+   "products": [
+    {
+     "image": "doc/224416_944232859.png",
+     "name": "Low Fat Ice Cream",
+     "zoom": "doc/943979_1497309201.jpg"
+    },
+    {
+     "image": "doc/310037_1695791817.png",
+     "name": "Medium Fat Ice Cream",
+     "zoom": "doc/136705_1030489890.jpg"
+    },
+    {
+     "image": "doc/728839_12680671.png",
+     "name": "Ice Cream",
+     "zoom": "doc/462266_744896263.jpg"
+    },
+    {
+     "image": "doc/956627_1544804752.png",
+     "name": "Ice Cream",
+     "zoom": "doc/719516_513603813.png"
+    }
+   ]
+  },
+  {
+   "cid": 17,
+   "name": "BON COOKIES",
+   "products": [
+    {
+     "image": "doc/665329_630058219.png",
+     "name": "Tutti frutti Cookies",
+     "zoom": "doc/427858_123641794.png"
+    },
+    {
+     "image": "doc/710220_1952827524.png",
+     "name": "Choco Chips Cookies",
+     "zoom": "doc/120215_1789546508.png"
+    },
+    {
+     "image": "doc/880063_484205207.png",
+     "name": "Atta Cookies",
+     "zoom": "doc/947350_722418975.png"
+    },
+    {
+     "image": "doc/268244_451388574.png",
+     "name": "Zeera Cookies",
+     "zoom": "doc/750665_35361684.png"
+    }
+   ]
+  },
+  {
+   "cid": 24,
+   "name": "MILK",
+   "products": [
+    {
+     "image": "doc/956280_770256044.png",
+     "name": "Full Cream Milk",
+     "zoom": "doc/415989_2031884161.png"
+    },
+    {
+     "image": "doc/147544_1671419557.png",
+     "name": "Double Toned Milk",
+     "zoom": "doc/419922_1485803588.png"
+    },
+    {
+     "image": "doc/283015_1179947541.png",
+     "name": "Toned Milk",
+     "zoom": "doc/720890_1909868481.png"
+    }
+   ]
+  },
+  {
+   "cid": 21,
+   "name": "DAHI",
+   "products": [
+    {
+     "image": "doc/546709_1746983445.jpg",
+     "name": "DAHI",
+     "zoom": "doc/648766_1047416299.png"
+    }
+   ]
+  },
+  {
+   "cid": 22,
+   "name": "CHHACH",
+   "products": [
+    {
+     "image": "doc/382590_1176895311.png",
+     "name": "CHHACH",
+     "zoom": "doc/519059_1944296772.png"
+    },
+    {
+     "image": "doc/770294_1580193488.jpg",
+     "name": "CHHACH",
+     "zoom": "doc/663657_1715323039.png"
+    }
+   ]
+  },
+  {
+   "cid": 23,
+   "name": "PANEER",
+   "products": [
+    {
+     "image": "doc/116909_203976023.jpg",
+     "name": "PANEER",
+     "zoom": "doc/351294_1790733894.png"
+    }
+   ]
+  }
+ ],
+ "home_slides": [
+  "doc/929334_1024782983.jpg",
+  "doc/760110_1187457718.png",
+  "doc/788568_26255.jpg",
+  "doc/867175_11557.jpg",
+  "doc/495854_770270126.png",
+  "doc/391000_31072.jpg",
+  "doc/311624_7902.jpg",
+  "doc/948995_19340.jpg",
+  "doc/769587_1809299850.jpg",
+  "doc/605900_1787103809.png",
+  "doc/872357_160627221.png"
+ ],
+ "infrastructure": [
+  "doc/slide-1.jpg",
+  "doc/slide-2.jpg",
+  "doc/slide-3.jpg",
+  "doc/slide-4.jpg"
+ ],
+ "csr": [
+  "doc/g1.jpg",
+  "doc/g2.jpg",
+  "doc/g3.jpg",
+  "doc/g4.jpg"
+ ],
+ "promotions": [
+  "doc/968167_1613443318.jpg",
+  "doc/643189_966265578.jpg",
+  "doc/658002_1858878420.jpg"
+ ],
+ "events_index": [
+  "doc/848383_1155488650.jpg",
+  "doc/549565_1822159868.jpg"
+ ],
+ "event_5": [
+  "doc/912467_505784421.jpg",
+  "doc/320235_1804418127.jpg",
+  "doc/177736_13332.jpg"
+ ],
+ "event_6": [
+  "doc/627923_1406209556.jpg",
+  "doc/740388_1462992525.jpg"
+ ],
+ "factory_tour": [
+  "doc/987318_322450012.jpg",
+  "doc/790568_702880577.jpg",
+  "doc/526422_1663334321.jpg"
+ ]
+}

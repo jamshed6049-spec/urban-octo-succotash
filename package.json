@@ -1,0 +1,11 @@
+{
+  "name": "frubon-website",
+  "version": "1.0.0",
+  "description": "FRUBON — Happiness Served Fresh. Website for the Jaipur ice cream, bakery and dairy brand by Dev Milk Foods.",
+  "private": true,
+  "scripts": {
+    "build": "node src/build.js",
+    "serve": "node src/build.js && python3 -m http.server 8080"
+  },
+  "license": "UNLICENSED"
+}
