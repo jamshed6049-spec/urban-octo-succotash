@@ -27,6 +27,62 @@ const FAQS = [
    'FRUBON carries out a variety of tests on its raw material, semi finished goods and finished good. Raw material means both packaging material and ingredients for manufacturing goods. Microbiological testing is also carried on its products to ensure highest order of product safety.'],
 ];
 
+/* The line, in the order it actually runs. Each step is anchored to a
+   photograph from the plant — no stock imagery, no invented figures. */
+const PROCESS = [
+  { n: 'Collection',  img: 'assets/img/factory/plant-2a.jpg',
+    cap: 'Reception & chilling',
+    h: 'It starts twice a day',
+    p: 'Milk is collected morning and evening from Dev Milk Foods&rsquo; own village farmer societies across Rajasthan, and chilled at source before it ever reaches Jaipur. Owning the collection end is what makes the rest of this line possible.',
+    fact: 'Two collections every day' },
+  { n: 'Clearance',   img: 'assets/img/factory/plant-4a.jpg',
+    cap: 'In-house quality lab',
+    h: 'Nothing moves until the lab says so',
+    p: 'Every intake is tested before it is allowed into production &mdash; and testing does not stop there. Raw material, semi-finished and finished goods are all checked, with microbiological testing carried out on the product itself.',
+    fact: 'Tested at three stages' },
+  { n: 'The mix',     img: 'assets/img/factory/plant-2b.jpg',
+    cap: 'Blending & ageing',
+    h: 'Fresh cream. Never vegetable oil.',
+    p: 'This is the step that separates ice cream from frozen dessert, and it is the one we refuse to move on. Frubon is built on fresh cream and milk fat. The mix is blended, pasteurised and left to age so the flavour sets properly before it is frozen.',
+    fact: '100% vegetarian &mdash; no egg, no animal fat' },
+  { n: 'Freezing',    img: 'assets/img/factory/plant-3b.jpg',
+    cap: 'Moulding line',
+    h: 'Frozen into shape',
+    p: 'The aged mix is drawn into moulds running through a brine tunnel &mdash; sticks placed, centres filled, coatings laid down. Cones, bars, kulfi and cups each take a different path off the same floor.',
+    fact: '21 ranges on one line' },
+  { n: 'Hardening',   img: 'assets/img/factory/plant-3a.jpg',
+    cap: 'Extraction',
+    h: 'Held cold, then lifted out',
+    p: 'Product is hardened right through before extraction. Pull it early and the texture never recovers &mdash; which is why this is the one stage on the line nobody is allowed to hurry.',
+    fact: 'Texture is set here, or not at all' },
+  { n: 'Packing',     img: 'assets/img/factory/plant-4b.jpg',
+    cap: 'Pack hall',
+    h: 'Sealed by the people who made it',
+    p: 'Packing happens on the same campus, under the same hygiene discipline &mdash; whites, hairnets, and a final check before anything is cased. The finished pack is tested once more before it is cleared.',
+    fact: 'Final clearance before dispatch' },
+  { n: 'Cold chain',  img: 'assets/img/factory/plant-1b.jpg',
+    cap: 'Dispatch, Mahindra World City',
+    h: 'Out across two states',
+    p: 'From the 60,000 sq ft campus at Mahindra World City, product moves out under cold chain to leading retail outlets and our own parlours across Rajasthan and Haryana.',
+    fact: '19 cities & towns' },
+];
+
+/* Practices worth showing rather than claiming. */
+const PRACTICES = [
+  { img: 'assets/img/factory/plant-4a.jpg', tag: 'Quality',
+    h: 'An in-house lab, not an outsourced certificate',
+    p: 'Microbiological and physical testing run on site, across raw material, semi-finished and finished goods.' },
+  { img: 'assets/img/factory/plant-4b.jpg', tag: 'People',
+    h: 'The same hands, every shift',
+    p: 'Whites, hairnets and a trained line team &mdash; the hygiene discipline is the product, not paperwork around it.' },
+  { img: 'assets/img/factory/plant-2b.jpg', tag: 'Plant',
+    h: '60,000 sq ft, built to be walked through',
+    p: 'One of the most modern dairy, ice cream and bakery setups in Northern India &mdash; and open to visitors on 48 hours&rsquo; notice.' },
+  { img: 'assets/img/factory/plant-1a.jpg', tag: 'Environment',
+    h: 'Water that goes round again',
+    p: 'Water recycled through the ETP runs the cleaning and the gardens; daylight and ventilation cut the load on the grid.' },
+];
+
 const MOMENTS = [
   { src: 'assets/img/doc/788568_26255.jpg', wide: true, alt: 'The bond of flavours — sharing Frubon ice lollies' },
   { src: 'assets/img/doc/311624_7902.jpg', alt: 'Two friends eating Frubon ice pops' },
@@ -57,6 +113,87 @@ module.exports = function build(B) {
   const { brand, groups, categories, gallery, esc, catsIn, groupOf, I,
           layout, pagehead, band, galleryBlock, catCard, write } = B;
 
+
+  /* ---- shared: the scroll-driven process ---- */
+  const processSection = (pre) => `
+<section class="scrolly" id="how-its-made">
+  <div class="wrap scrolly__head" data-reveal>
+    <span class="eyebrow" style="color:var(--fru-green)">How it&rsquo;s made</span>
+    <h2 data-split>From a morning collection<br>to a sealed pack</h2>
+    <p class="lede">Seven steps, photographed on our own floor at Mahindra World City. Scroll through the line.</p>
+  </div>
+  <div class="wrap scrolly__inner">
+    <div class="scrolly__stage">
+      <div class="stage__media">
+        ${PROCESS.map((st, i) => `<figure class="stage__img${i === 0 ? ' is-active' : ''}">
+          <img src="${pre}${st.img}" alt="${esc(st.cap)} — Frubon plant, Jaipur" loading="lazy">
+          <figcaption>${st.cap}</figcaption>
+        </figure>`).join('')}
+      </div>
+      <div class="stage__meta">
+        <span class="stage__num">01</span>
+        <span class="stage__of">/ ${String(PROCESS.length).padStart(2, '0')}</span>
+        <span class="stage__track"><i class="stage__fill"></i></span>
+      </div>
+    </div>
+    <div class="scrolly__steps">
+      ${PROCESS.map((st, i) => `<article class="step${i === 0 ? ' is-active' : ''}">
+        <span class="step__n">${String(i + 1).padStart(2, '0')}</span>
+        <h3>${st.h}</h3>
+        <p>${st.p}</p>
+        ${st.fact ? `<span class="step__fact">${st.fact}</span>` : ''}
+      </article>`).join('')}
+    </div>
+  </div>
+  <p class="scrolly__live" role="status" aria-live="polite"></p>
+</section>`;
+
+  /* ---- shared: compact process teaser (home) ---- */
+  const processTeaser = (pre) => `
+<section class="scrolly" style="padding:clamp(64px,9vw,120px) 0">
+  <div class="wrap">
+    <div class="teaser__top" data-reveal>
+      <div>
+        <span class="eyebrow" style="color:var(--fru-green)">How it&rsquo;s made</span>
+        <h2 data-split>Seven steps, one floor</h2>
+        <p class="lede" style="color:#BDB2A4">Photographed on our own line at Mahindra World City &mdash; from the morning collection to the pack that leaves the building.</p>
+      </div>
+      <a class="btn btn--light" href="${pre}factory-tour.html#how-its-made" data-magnetic>Walk the full line ${I.arrow}</a>
+    </div>
+    <div class="teaser__shots">
+      ${[1, 3, 5].map((k, i) => `<figure data-reveal="${i * 110}">
+        <img src="${pre}${PROCESS[k].img}" alt="${esc(PROCESS[k].cap)} — Frubon plant" loading="lazy">
+        <figcaption>${PROCESS[k].cap}</figcaption>
+      </figure>`).join('')}
+    </div>
+    <ol class="teaser__steps">
+      ${PROCESS.map((st, i) => `<li data-reveal="${i * 45}"><b>${String(i + 1).padStart(2, '0')}</b><span>${st.n}</span></li>`).join('')}
+    </ol>
+  </div>
+</section>`;
+
+  /* ---- shared: practices / people ---- */
+  const practiceSection = (pre) => `
+<section class="pad">
+  <div class="wrap">
+    <div data-reveal style="max-width:760px;margin-bottom:3rem">
+      <span class="eyebrow">Inside the plant</span>
+      <h2 data-split>The part of the brand<br>nobody photographs</h2>
+      <p class="lede">A lab that can stop the line, a team that keeps the discipline, and a building designed to give some of what it takes back.</p>
+    </div>
+    <div class="grid grid-2">
+      ${PRACTICES.map((pr, i) => `<article class="practice" data-reveal="${i * 90}">
+        <img src="${pre}${pr.img}" alt="${esc(pr.h)}" loading="lazy">
+        <div class="practice__body">
+          <span class="practice__tag">${pr.tag}</span>
+          <h3>${pr.h}</h3>
+          <p>${pr.p}</p>
+        </div>
+      </article>`).join('')}
+    </div>
+  </div>
+</section>`;
+
   /* =============== HOME =============== */
   const featured = ['cups', 'frucone', 'matka-kulfi', 'choco-bon', 'frujoy', 'bon-cookies', 'ice-cream-cakes', 'milk']
     .map(id => categories.find(c => c.id === id)).filter(Boolean);
@@ -75,54 +212,59 @@ module.exports = function build(B) {
   <div class="wrap hero__grid">
     <div data-reveal>
       <span class="eyebrow">${esc(brand.city)} · Since 2004</span>
-      <h1><span class="l1">Happiness</span><span class="l2">Served Fresh</span></h1>
-      <p class="hero__lede"><strong>Fru</strong> from fruit. <strong>Bon</strong> for good. Two words that decide everything we put in a pack — and one promise we have kept across ${categories.length} ranges of ice cream, bakery and dairy.</p>
+      <h1 data-split><span class="l1">Happiness</span><span class="l2">Served Fresh</span></h1>
+      <p class="hero__lede">Real milk from our own village farmer societies. Churned with fresh cream in a 60,000 sq ft plant outside Jaipur. Ice cream in the truest sense of the word &mdash; across ${categories.length} ranges.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary" href="products.html">Explore the range ${I.arrow}</a>
-        <a class="btn btn--ghost" href="about.html">Our story</a>
+        <a class="btn btn--primary" href="products.html" data-magnetic>Explore the range ${I.arrow}</a>
+        <a class="btn btn--ghost" href="factory-tour.html#how-its-made">See how it&rsquo;s made</a>
       </div>
       <div class="hero__proof">
-        <div class="proof"><b>60,000</b><span>SQ FT PLANT</span></div>
-        <div class="proof"><b>${categories.length}</b><span>PRODUCT RANGES</span></div>
-        <div class="proof"><b>${categories.reduce((n, c) => n + c.products.length, 0)}</b><span>VARIANTS</span></div>
-        <div class="proof"><b>19</b><span>CITIES &amp; TOWNS</span></div>
+        <div class="proof"><b data-count="60000">60,000</b><span>SQ FT PLANT</span></div>
+        <div class="proof"><b data-count="${categories.length}">${categories.length}</b><span>PRODUCT RANGES</span></div>
+        <div class="proof"><b data-count="${categories.reduce((n, c) => n + c.products.length, 0)}">${categories.reduce((n, c) => n + c.products.length, 0)}</b><span>VARIANTS</span></div>
+        <div class="proof"><b data-count="19">19</b><span>CITIES &amp; TOWNS</span></div>
       </div>
     </div>
     <div class="hero__art" data-reveal="150">
-      <div class="hero__seal">FRU&nbsp;=&nbsp;FRESH<br>BON&nbsp;=&nbsp;GOOD</div>
-      <div class="pod pod-a"><img src="assets/img/doc/929334_1024782983.jpg" alt="Frubon mango kulfi bar" width="520" height="500"></div>
-      <div class="pod pod-b"><img src="assets/img/doc/867175_11557.jpg" alt="Frubon ice cream" width="420" height="820"></div>
-      <div class="pod pod-c"><img src="assets/img/doc/769587_1809299850.jpg" alt="Frubon ice cream cup" width="520" height="500"></div>
+      <div class="hero__seal">MADE IN<br>JAIPUR<br>SINCE 2004</div>
+      <div class="pod pod-a" data-parallax="0.06"><img src="assets/img/doc/929334_1024782983.jpg" alt="Frubon mango kulfi bar" width="520" height="500"></div>
+      <div class="pod pod-b" data-parallax="-0.09"><img src="assets/img/doc/867175_11557.jpg" alt="Frubon ice cream" width="420" height="820"></div>
+      <div class="pod pod-c" data-parallax="0.13"><img src="assets/img/doc/769587_1809299850.jpg" alt="Frubon ice cream cup" width="520" height="500"></div>
     </div>
+  </div>
+  <div class="wrap" style="margin-top:2.4rem">
+    <span class="cue"><span class="cue__line"></span>Scroll</span>
   </div>
 </section>
 
 <div class="ticker" aria-hidden="true"><div class="ticker__row">
-  ${Array(2).fill('<span>The bond of flavours</span><span>Made with fresh cream</span><span>100% vegetarian</span><span>Churned in Jaipur</span><span>No frozen dessert, ever</span>').join('')}
+  ${Array(2).fill('<span>Milk collected twice daily</span><span>Made with fresh cream</span><span>100% vegetarian</span><span>Churned in Jaipur</span><span>No frozen dessert, ever</span>').join('')}
 </div></div>
 
 <section class="pad">
   <div class="wrap split">
-    <div class="split__media" data-reveal><img src="assets/img/doc/slide-3.jpg" alt="Inside the Frubon plant at Mahindra World City, Jaipur"></div>
+    <div class="split__media" data-reveal><img src="assets/img/factory/plant-2a.jpg" alt="Milk reception and chilling at the Frubon plant" data-parallax="0.05"></div>
     <div data-reveal="120">
-      <span class="eyebrow">The name</span>
-      <h2>Two syllables.<br>One standard.</h2>
-      <p class="lede">We live in an age where flavours have crossed their traditional defined boundaries. Flavours now play the role of a social connector — a reason to bond at every occasion.</p>
-      <div class="namecard">
-        <div class="namebit"><b>FRU</b><span>from <em>Fruit</em> — freshness, held as a non-negotiable</span></div>
-        <div class="namebit"><b>BON</b><span>French for <em>Good</em> — goodness, in every single pack</span></div>
+      <span class="eyebrow">The standard</span>
+      <h2 data-split>Ice cream, or<br>frozen dessert.</h2>
+      <p class="lede">Most of what is sold in India as ice cream is frozen dessert &mdash; made with vegetable oil because it is cheaper and easier to freeze.</p>
+      <p>Frubon is made with fresh cream and milk fat. It costs more, it is harder to run, and it is the whole reason the brand exists. We have never manufactured frozen dessert and we do not intend to start.</p>
+      <div class="grid grid-2" style="margin:2rem 0">
+        <div class="pillar" data-accent="green" style="padding:1.5rem"><h3 style="font-size:1.05rem">Our own collection</h3><p>Milk from Dev Milk Foods&rsquo; village farmer societies, chilled at source.</p></div>
+        <div class="pillar" data-accent="orange" style="padding:1.5rem"><h3 style="font-size:1.05rem">100% vegetarian</h3><p>No eggs, no animal fat &mdash; in anything we have ever made.</p></div>
       </div>
-      <p>At the core of it, Frubon is the celebration of moments and certainly a compliment to <strong>the bond of flavours</strong>.</p>
-      <a class="btn btn--ghost" href="about.html">Read the full story ${I.arrow}</a>
+      <a class="btn btn--ghost" href="factory-tour.html#how-its-made">Walk the line ${I.arrow}</a>
     </div>
   </div>
 </section>
+
+${processTeaser('')}
 
 <section class="pad" style="background:var(--cream-2)">
   <div class="wrap">
     <div class="center" data-reveal style="max-width:760px;margin-inline:auto">
       <span class="eyebrow">The portfolio</span>
-      <h2>Four families. ${categories.length} ranges.</h2>
+      <h2 data-split>Four families. ${categories.length} ranges.</h2>
       <p class="lede" style="margin-inline:auto">From the matka kulfi Rajasthan has always known to the cookies and fresh paneer that share our campus.</p>
     </div>
     <div class="grid grid-4" style="margin-top:3rem">
@@ -134,59 +276,48 @@ module.exports = function build(B) {
         </div>
       </a>`).join('')}
     </div>
-    <div class="grid grid-4" style="margin-top:1.6rem">
-      ${featured.map((c, i) => catCard(c, '', i)).join('')}
-    </div>
-    <div class="center" style="margin-top:2.6rem"><a class="btn btn--primary" href="products.html">See all ${categories.length} ranges ${I.arrow}</a></div>
   </div>
 </section>
 
-<section class="pad">
+<section class="rail" data-rail style="background:var(--cream-2)">
+  <div class="rail__sticky">
+    <div class="rail__head" data-reveal>
+      <span class="eyebrow">Best known for</span>
+      <h2 style="margin-bottom:.4em">The ranges people ask for by name</h2>
+      <span class="rail__hint">Keep scrolling</span>
+    </div>
+    <div class="rail__track">
+      ${featured.map((c, i) => `<div class="rail__card">${catCard(c, '', 0)}</div>`).join('')}
+      <div class="rail__card" style="display:grid;place-items:center">
+        <a class="btn btn--primary" href="products.html" data-magnetic>All ${categories.length} ranges ${I.arrow}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+${practiceSection('')}
+
+<section class="pad-s" style="background:var(--cream-2)">
   <div class="wrap">
-    <div class="center" data-reveal style="max-width:720px;margin-inline:auto">
-      <span class="eyebrow">Why Frubon</span>
-      <h2>Value without compromise.<br>Everytime, everywhere.</h2>
+    <div class="center" data-reveal style="max-width:720px;margin-inline:auto;margin-bottom:2.6rem">
+      <span class="eyebrow">By the numbers</span>
+      <h2 data-split>What the plant runs on</h2>
     </div>
-    <div class="grid grid-4" style="margin-top:3rem">
-      ${pillars.map(([icon, h, p], i) => `<div class="pillar" data-accent="${['green','orange','sky','sun'][i]}" data-reveal="${i * 70}">
-        <div class="pillar__icon">${icon}</div><h3>${h}</h3><p>${p}</p>
-      </div>`).join('')}
-    </div>
-  </div>
-</section>
-
-<section class="pad" style="background:var(--cream-2)">
-  <div class="wrap split split--flip">
-    <div class="split__media" data-reveal><img src="assets/img/doc/slide-1.jpg" alt="Frubon manufacturing plant"></div>
-    <div data-reveal="120">
-      <span class="eyebrow">Infrastructure</span>
-      <h2>60,000 sq ft at Mahindra World City</h2>
-      <p class="lede">One of the most modern dairy, ice cream and bakery plants in Northern India — with recycled water running the gardens and daylight doing the work of the lights.</p>
-      <a class="btn btn--ghost" href="infrastructure.html">Inside the plant ${I.arrow}</a>
+    <div class="figure-row">
+      <div class="figure" data-reveal><b data-count="2">2</b><span>MILK COLLECTIONS A DAY</span></div>
+      <div class="figure" data-reveal="70"><b data-count="3">3</b><span>STAGES OF TESTING</span></div>
+      <div class="figure" data-reveal="140"><b data-count="60000">60,000</b><span>SQ FT CAMPUS</span></div>
+      <div class="figure" data-reveal="210"><b data-count="0">0</b><span>FROZEN DESSERT</span></div>
     </div>
   </div>
 </section>
 
 <section class="pad">
-  <div class="wrap presence">
-    <div data-reveal>
-      <span class="eyebrow">Our presence</span>
-      <h2>Across Rajasthan,<br>and beyond it.</h2>
-      <p class="lede">19 cities and towns across Rajasthan and Haryana — sold through leading retail outlets and our own parlours.</p>
-      <a class="btn btn--ghost" href="presence.html">See the map ${I.arrow}</a>
-    </div>
-    <div class="split__media" data-reveal="120" data-zoom="assets/img/ui/eaddress.jpg" data-caption="FRUBON — our presence across India" tabindex="0" role="button" style="cursor:zoom-in">
-      <img src="assets/img/ui/eaddress.jpg" alt="Map of FRUBON presence across Rajasthan and Haryana" style="aspect-ratio:auto;background:#fff">
-    </div>
-  </div>
-</section>
-
-<section class="pad" style="background:var(--cream-2)">
   <div class="wrap">
     <div class="center" data-reveal style="max-width:720px;margin-inline:auto;margin-bottom:2.8rem">
       <span class="eyebrow">The bond of flavours</span>
-      <h2>Flavour is a social connector</h2>
-      <p class="lede" style="margin-inline:auto">A reason to bond at every occasion. That idea is the whole brand — and it has looked like this since day one.</p>
+      <h2 data-split>Flavour is a social connector</h2>
+      <p class="lede" style="margin-inline:auto">A reason to bond at every occasion. That idea is the whole brand &mdash; and it has looked like this since day one.</p>
     </div>
     <div class="mosaic">
       ${MOMENTS.map((m, i) => `<figure${m.wide ? ' class="wide"' : ''} data-reveal="${i * 55}" data-zoom="${m.src}" data-caption="${esc(m.alt)}" tabindex="0" role="button" aria-label="Enlarge image">
@@ -197,6 +328,20 @@ module.exports = function build(B) {
 </section>
 
 <section class="pad-s">
+  <div class="wrap presence">
+    <div data-reveal>
+      <span class="eyebrow">Our presence</span>
+      <h2 data-split>Across Rajasthan,<br>and beyond it.</h2>
+      <p class="lede">19 cities and towns across Rajasthan and Haryana &mdash; sold through leading retail outlets and our own parlours.</p>
+      <a class="btn btn--ghost" href="presence.html">See the map ${I.arrow}</a>
+    </div>
+    <div class="split__media" data-reveal="120" data-zoom="assets/img/ui/eaddress.jpg" data-caption="FRUBON — our presence across India" tabindex="0" role="button" style="cursor:zoom-in">
+      <img src="assets/img/ui/eaddress.jpg" alt="Map of FRUBON presence across Rajasthan and Haryana" style="aspect-ratio:auto;background:#fff">
+    </div>
+  </div>
+</section>
+
+<section class="pad-s" style="background:var(--cream-2)">
   <div class="wrap">
     <div class="center" data-reveal><span class="eyebrow">FruBuzz</span><h2>What&rsquo;s happening</h2></div>
     <div class="grid grid-3" style="margin-top:2.4rem">
@@ -210,12 +355,12 @@ module.exports = function build(B) {
   </div>
 </section>
 
-${band('', { h: 'Come taste the bond of flavours', p: 'Book a factory tour, find your nearest stockist, or talk to us about a Frubon franchise.', href: 'contact.html', cta: 'Say hello', href2: 'factory-tour.html', cta2: 'Book a tour' })}
+${band('', { h: 'Come and see it made', p: 'Book a factory tour, find your nearest stockist, or talk to us about a Frubon franchise.', href: 'factory-tour.html', cta: 'Book a tour', href2: 'contact.html', cta2: 'Say hello' })}
 `;
 
   write('index.html', layout({
     title: 'FRUBON — Happiness Served Fresh | Ice Cream, Bakery & Dairy from Jaipur',
-    desc: 'FRUBON is Jaipur’s premium ice cream, bakery and dairy brand from Dev Milk Foods. Real milk fat, 100% vegetarian, churned fresh across 21 ranges.',
+    desc: 'FRUBON is Jaipur\u2019s premium ice cream, bakery and dairy brand from Dev Milk Foods. Real milk fat, 100% vegetarian, churned fresh across 21 ranges.',
     nav: 'home', accent: 'orange', body: home,
     ogImage: 'assets/img/doc/929334_1024782983.jpg',
   }));
@@ -460,20 +605,23 @@ ${band('', { h: 'Not in your city yet?', p: 'We are expanding across North India
   /* =============== FACTORY TOUR =============== */
   const tour = `
 ${pagehead({ p: '', crumb: 'Factory Tour', eyebrow: 'Factory Tour', h1: 'Give us 48 hours.<br>Eat all the ice cream you want.',
-  lede: 'We give pre-arranged tours to school students, colleges and youth groups — a genuinely good way to learn how ice cream, bakery and dairy actually get made.', blob: 'var(--sky)' })}
-<section class="pad-s"><div class="wrap">
+  lede: 'We give pre-arranged tours to school students, colleges and youth groups \u2014 a genuinely good way to learn how ice cream, bakery and dairy actually get made.', blob: 'var(--sky)' })}
+
+${processSection('')}
+
+<section class="pad-s" style="background:var(--cream-2)"><div class="wrap">
   <div class="split" style="margin-bottom:3.4rem">
-    <div class="split__media" data-reveal><img src="assets/img/ui/x1.jpg" alt="Frubon factory tour"></div>
+    <div class="split__media" data-reveal><img src="assets/img/ui/x1.jpg" alt="Frubon factory tour" data-parallax="0.06"></div>
     <div data-reveal="100">
       <span class="eyebrow">How it works</span>
       <h2>Book your Frubon Factory Tour</h2>
       <ol style="padding-left:1.2rem;color:var(--ink-2)">
-        <li style="margin-bottom:.8rem">Send us your group size and preferred date — at least <strong>48 hours</strong> ahead.</li>
+        <li style="margin-bottom:.8rem">Send us your group size and preferred date \u2014 at least <strong>48 hours</strong> ahead.</li>
         <li style="margin-bottom:.8rem">We confirm a slot at the Mahindra World City plant, Jaipur.</li>
-        <li style="margin-bottom:.8rem">Walk the churn hall, the bakery and the dairy dock with our team.</li>
+        <li style="margin-bottom:.8rem">Walk the line you just scrolled through, with the team who run it.</li>
         <li>Finish in the tasting room. There is no scoop limit.</li>
       </ol>
-      <a class="btn btn--primary" href="contact.html">Book your visit ${I.arrow}</a>
+      <a class="btn btn--primary" href="contact.html" data-magnetic>Book your visit ${I.arrow}</a>
       <div class="pillar" data-accent="green" style="margin-top:1.8rem;padding:1.5rem 1.6rem">
         <span class="eyebrow" style="margin-bottom:.6rem">For pre-booking the tour</span>
         <div class="contactbar" style="grid-template-columns:1fr">
@@ -492,8 +640,9 @@ ${pagehead({ p: '', crumb: 'Factory Tour', eyebrow: 'Factory Tour', h1: 'Give us
   </div>
 </div></section>
 `;
-  write('factory-tour.html', layout({ title: 'Factory Tour — FRUBON | Book a visit to our Jaipur plant', accent: 'sky',
-    desc: 'Book a Frubon factory tour with 48 hours’ notice. Pre-arranged tours for schools, colleges and youth groups at Mahindra World City, Jaipur.', body: tour }));
+  write('factory-tour.html', layout({ title: 'Factory Tour — FRUBON | How it\u2019s made, and how to visit', accent: 'sky',
+    desc: 'Scroll the Frubon line step by step \u2014 collection, lab clearance, the mix, freezing, hardening, packing and cold chain \u2014 then book a tour of the Jaipur plant.',
+    ogImage: 'assets/img/factory/plant-3b.jpg', body: tour }));
 
   /* =============== CONTACT =============== */
   const TYPES = ['Enquiry', 'Feedback', 'Suggestion', 'Franchisee', 'Complaint'];

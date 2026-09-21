@@ -95,6 +95,8 @@ function layout(o) {
 </head>
 <body${o.accent ? ` data-accent="${o.accent}"` : ''}>
 
+<div class="scroll-bar" aria-hidden="true"></div>
+
 <header class="site-head">
   <div class="wrap--wide">
     <a class="brandmark" href="${u('index.html')}" aria-label="FRUBON — home">

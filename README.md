@@ -60,6 +60,7 @@ assets/css/fonts.css    Self-hosted @font-face
 assets/js/frubon.js     Nav, reveals, accordion, tabs, lightbox (no dependencies)
 assets/img/doc/         Product packshots and galleries
 assets/img/ui/          Brand and interface imagery
+assets/img/factory/     Plant photography, split out of the original slides
 
 src/data/site.json      Content model — the single source of truth
 src/build.js            Static generator (shell, nav, footer, shared fragments)
@@ -100,13 +101,58 @@ image has a real alpha channel. Only cutouts get a silhouette `drop-shadow` — 
 to an opaque packshot, `drop-shadow` traces the bounding box and prints a visible
 rectangle instead.
 
+## Interaction layer
+
+`assets/js/frubon.js` is dependency-free and drives every scroll-linked effect from
+**one rAF-throttled scroll listener**. Layout offsets are cached and only recomputed
+when something actually changes — a lazy image arriving, a webfont swapping in, a
+resize — via a `ResizeObserver` on `<body>` plus `document.fonts.ready`. Nothing
+reads layout during scroll.
+
+| Effect | Markup | Notes |
+|---|---|---|
+| Scroll progress | `.scroll-bar` | Brand-gradient bar, `transform: scaleX()` |
+| Parallax | `data-parallax="0.06"` | Signed speed; negative moves against the scroll |
+| Headline reveal | `data-split` | Words rise into view, staggered 55ms |
+| Counters | `data-count="60000"` | easeOutCubic, fires once on enter |
+| Horizontal rail | `data-rail` | Vertical scroll → horizontal travel |
+| Scrollytelling | `.scrolly` | Sticky stage, steps drive the image |
+| Magnetic buttons | `data-magnetic` | Pointer-only, hover-capable devices |
+| Enter reveals | `data-reveal="120"` | IntersectionObserver, optional delay in ms |
+
+### How it's made — the scrollytelling
+
+`factory-tour.html` pins a stage and advances through seven steps as you scroll,
+each tied to a photograph taken on the real line at Mahindra World City. The active
+step is whichever step's midpoint is nearest the viewport's reading line, so it
+tracks the scroll continuously rather than snapping on thresholds. A visually hidden
+`role="status"` region announces `Step 3 of 7: …` for screen readers, and on mobile
+the stage becomes a solid sticky header with the steps flowing beneath it.
+
+The homepage does **not** repeat it — it carries a compact teaser that hands off to
+the factory page, so the two pages stay distinct.
+
+### Two things worth knowing
+
+- **The rail sizes itself.** Its section height is set at runtime to
+  `trackWidth + viewportHeight`, so horizontal travel is exactly 1:1 with vertical
+  scroll and there is no dead space once the track has finished. Without JS it
+  degrades to an ordinary horizontally scrollable strip.
+- **`data-split` walks text nodes, not `innerHTML`.** Splitting words with a regex
+  over markup corrupts nested tags — `<br>` moves and styled spans get mangled. The
+  DOM walker leaves element nodes untouched.
+
 ## Accessibility & quality
 
 Verified across 36 pages × 3 viewports (1440 / 768 / 390):
 no JavaScript errors, no failed requests, no broken images, no horizontal overflow,
 one `<h1>` per page, and an `alt` attribute on every image. Focus states are visible,
-the lightbox and mobile drawer are keyboard- and Escape-operable, and
-`prefers-reduced-motion` disables all animation.
+the lightbox and mobile drawer are keyboard- and Escape-operable.
+
+Under `prefers-reduced-motion: reduce`, parallax and the rail are not registered at
+all, words and reveals render in place, counters print their final value immediately,
+and the scrollytelling still advances — verified, not assumed. The page is readable
+and navigable with JavaScript disabled.
 
 ## Forms
 
