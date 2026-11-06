@@ -196,7 +196,12 @@ body.menu-open .burger span::after  { top: 0; transform: rotate(-45deg); }
 .hero__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: center; position: relative; z-index: 2; }
 .hero h1 { margin-bottom: .35em; }
 .hero h1 .l1 { display: block; color: var(--ink); }
-.hero h1 .l2 { display: block; background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero h1 .l2 { display: block; color: transparent; }
+/* The word-reveal script wraps each word in an inline-block <i>, and a parent's
+   background-clip:text does not paint through inline-block children — so the
+   gradient has to be clipped on the words themselves or the line goes invisible. */
+.hero h1 .l2,
+.hero h1 .l2 .w > i { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; }
 .hero__lede { font-size: clamp(1.05rem, 1.5vw, 1.28rem); color: var(--ink-2); max-width: 46ch; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
 .hero__proof { display: flex; flex-wrap: wrap; gap: 2.4rem; margin-top: 3.2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
